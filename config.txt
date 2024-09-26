@@ -1,0 +1,15 @@
+int
+int
++
+long
+long
+-
+float
+float
+*
+double
+double
+/
+int
+int
+/
