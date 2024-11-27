@@ -4,7 +4,7 @@
 
 ## Описание программы с соответствующими логами из консоли:
 
-1. Статический экземпляр
+1. _Статический экземпляр_
     ```cpp
     std::cout << "=== Static Instance ===" << std::endl;
     Number obj(765);
@@ -20,7 +20,7 @@
         Number: 765, Text: seven hundred sixty five  
         Destructor id = 1  
 
-2. Динамический экземпляр
+2. _Динамический экземпляр_
     ```cpp
     std::cout << "=== Dynamic Instance ===" << std::endl;
     Number *obj = new Number(20);
@@ -37,7 +37,7 @@
         Number: 20, Text: twenty  
         Destructor id = 2  
 
-3. Передача по значению
+3. _Передача по значению_
     ```cpp
     std::cout << "\n=== Passing by Value ===" << std::endl;
     processByValue(obj);
@@ -53,7 +53,7 @@
         Number: 10, Text: ten  
         Destructor id = 4  
 
-4. Передача по ссылке
+4. _Передача по ссылке_
     ```cpp
     std::cout << "\n=== Passing by Reference ===" << std::endl;
     processByReference(obj);
@@ -67,7 +67,7 @@
         Number: 10, Text: ten  
         Destructor id = 3  
 
-5. Возврат объекта по значению
+5. _Возврат объекта по значению_
     ```cpp
     std::cout << "=== Returning by Value ===\n" << std::endl;
     Number returnObj = createInstance(30);
@@ -82,7 +82,7 @@
         Number: 30, Text: thirty  
         Destructor id = 5  
 
-6. Конструктор копирования
+6. _Конструктор копирования_
     ```cpp
     std::cout << "\n=== Copy constructor ===" << std::endl;
     Number obj2{obj};
@@ -97,7 +97,7 @@
         Destructor id = 7  
         Destructor id = 6  
 
-7. Конструктор перемещения
+7. _Конструктор перемещения_
     ```cpp
     std::cout << "\n=== Move constructor ===" << std::endl;
     Number obj2{std::move(obj)};
@@ -113,7 +113,7 @@
         Destructor id = 9  
         Destructor id = 8  
 
-8. Операторы присваивания
+8. _Операторы присваивания_
     ```cpp
     std::cout << "\n=== Assign ===" << std::endl;
     obj = obj2;
@@ -137,7 +137,7 @@
         Destructor id = 11  
         Destructor id = 10  
 
-9. Работа с `std::vector`
+9. _Работа с `std::vector`_
     ```cpp
     std::cout << "=== Vector push by rvalue ===" << std::endl;
     std::vector<Number> myVector;
@@ -167,7 +167,7 @@
 
     В процессе работы вектора временные объекты создаются и перемещаются, кроме того объекты, которые уже находились в векторе при добавлении новых элементов тоже перемещаются и удаляются. 
 
-10. Работа с `std::list`
+10. _Работа с `std::list`_
     ```cpp
     std::cout << "=== List push by rvalue ===\n" << std::endl;
     std::list<Number> myList;
