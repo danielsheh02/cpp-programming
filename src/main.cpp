@@ -36,11 +36,8 @@ int main() {
   std::mt19937 gen(rd());
   std::uniform_int_distribution<> dist_size(500, 1000);
   std::uniform_int_distribution<> dist_value(1, 999);
-  std::cout << dist_size << std::endl;
-  std::cout << dist_value << std::endl;
 
   int size_v1 = dist_size(gen);
-  std::cout << size_v1 << std::endl;
   std::vector<Number> v1;
   v1.reserve(size_v1);
   std::generate_n(std::back_inserter(v1), size_v1,
