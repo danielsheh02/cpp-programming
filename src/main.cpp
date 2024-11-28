@@ -54,7 +54,7 @@ int main() {
 
   // 3. Создание списка list1 из n наибольших элементов вектора v1
   int n = std::uniform_int_distribution<>(20, 50)(gen);
-  std::vector<Number> temp_vector1(v1.size());
+  std::vector<Number> temp_vector1(n);
   std::partial_sort_copy(
       v1.begin(), v1.end(), temp_vector1.begin(), temp_vector1.end(),
       [](const Number &a, const Number &b) { return a.number > b.number; });
@@ -64,7 +64,7 @@ int main() {
   std::cout << "list1 size: " << list1.size() << std::endl;
 
   // 4. Создание списка list2 из n наименьших элементов вектора v2
-  std::vector<Number> temp_vector2(v2.size());
+  std::vector<Number> temp_vector2(n);
   std::partial_sort_copy(
       v2.begin(), v2.end(), temp_vector2.begin(), temp_vector2.end(),
       [](const Number &a, const Number &b) { return a.number < b.number; });
